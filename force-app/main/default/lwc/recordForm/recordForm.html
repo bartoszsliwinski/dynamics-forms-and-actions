@@ -1,0 +1,25 @@
+<template>
+
+    <article class={classes}>
+        <div class="slds-card__header slds-grid" if:false={isTitleAndIconEmpty}>
+            <header class="slds-media slds-media--center slds-has-flexi-truncate">
+                <lightning-icon icon-name={icon} alternative-text={icon} class="slds-avatar_small slds-m-right_small" if:false={isIconEmpty}></lightning-icon>
+                <div class="slds-media__body" if:false={isTitleEmpty}>
+                    <h2 class="slds-card__header-title slds-card__header-link">
+                        <span>{title}</span>
+                    </h2>
+                </div>
+            </header>
+        </div>
+        <div class="slds-card__body slds-card__body_inner">
+            <lightning-record-form object-api-name={objectApiName}
+                                   record-id={recordId}
+                                   columns={columns}
+                                   mode={mode}
+                                   onsuccess={handleSuccess}
+                                   fields={fieldsList}>
+            </lightning-record-form>
+        </div>
+    </article>
+
+</template>

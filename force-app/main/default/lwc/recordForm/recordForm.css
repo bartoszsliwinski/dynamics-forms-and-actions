@@ -1,0 +1,62 @@
+.marginBottom_neg_X_small{
+    margin-bottom: -0.75rem;
+}
+.marginTop_neg_X_small{
+    margin-top: -0.75rem;
+}/*In Community, margin between recordForm and conditionalRecordForm,
+    that are situated inside the standard Tab component is 1.5 rem.
+    To completely eliminate margin between 2 components, use this styles on both of the neighbouring components correspondingly*/
+.marginTop_neg_small{
+    margin-top: -1.5rem;
+}
+.marginTop_neg_medium{
+    margin-top: -2rem;
+}
+.marginTop_neg_large{
+    margin-top: -3rem;
+}
+.borderRoundedAround{
+    border-width: var(--sds-c-card-sizing-border,1px);
+    border-style: solid;
+    border-color: var(--sds-c-card-color-border, rgb(153, 153, 153));
+    border-radius: var(--sds-c-card-radius-border,0.25rem);
+} /*Contains only border settings from slds-card */
+.NoBorder_slds-card {
+    position: relative;
+    padding-top: var(--sds-c-card-spacing-block-start, 0);
+    padding-right: var(--sds-c-card-spacing-inline-end, 0);
+    padding-bottom: var(--sds-c-card-spacing-block-end, 0);
+    padding-left: var(--sds-c-card-spacing-inline-start, 0);
+    background: var(--sds-c-card-color-background,rgb(255, 255, 255));
+    background-clip: padding-box;
+    box-shadow: var(--sds-c-card-shadow, none);
+    color: var(--sds-c-card-text-color);
+} /*Contains all properties of slds-card without border settings */
+.Bottom_slds-card_border{
+    border-width: var(--sds-c-card-sizing-border, 1px);
+    border-top-width: 0px;
+    border-style: solid;
+    border-color: var(--sds-c-card-color-border, rgb(153, 153, 153));
+    border-radius: var(--sds-c-card-radius-border,0.25rem);
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+} /*A slds-card without top border. Used in combination with NoBorder_slds-card. 
+  Can be used with marginTop_neg_small in order to make 2 or more components look like 1*/
+.Top_slds-card_border{
+    border-width: var(--sds-c-card-sizing-border, 1px);
+    border-bottom-width: 0px;
+    border-style: solid;
+    border-color: var(--sds-c-card-color-border, rgb(153, 153, 153));
+    border-radius: var(--sds-c-card-radius-border,0.25rem);
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+} /*A slds-card without bottom border. Used in combination with NoBorder_slds-card. 
+  Can be used with marginTop_neg_small in order to make 2 or more components look like 1*/
+.Medium_slds-card_border{
+    border-width: var(--sds-c-card-sizing-border, 1px);
+    border-top-width: 0px;
+    border-bottom-width: 0px;
+    border-style: solid;
+    border-color: var(--sds-c-card-color-border, rgb(153, 153, 153));
+}/*A slds-card without top and bottom borders. Used in combination with NoBorder_slds-card. 
+  Can be used with marginTop_neg_small in order to make 2 or more components look like 1*/

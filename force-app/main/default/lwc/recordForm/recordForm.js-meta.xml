@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>60.0</apiVersion>
+    <description>Record Form</description>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightning__RecordPage</target>
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__RecordPage,lightningCommunity__Default">
+            <property name="title" type="String" label="Title" description="The title of the tile"/>
+            <property name="icon" type="String" label="Icon" description="The name of the icon to be displayed"/>
+            <property name="fields" type="String" label="Fields to display" required="true"
+                description="List of fields separated by commas ( FirstName,LastName )"/>
+            <property name="columns" type="Integer" default="2" label="Number of columns" min="1"/>
+            <property name="mode" type="String" label="Form mode" datasource="view,edit,readonly" default="view" required="true"
+                description="view/edit - can be switched between with edit/cancel/save. readonly - cannot change mode to edit"/>
+            <property name="successMessage" type="String" label="Success message" description="If specified shows toast message."/>
+            <property name="recordId" type="String" label="Record Id" description="Id of a record (use {!recordId} in Community)."/>
+            <property name="objectApiName" type="String" label="Object API Name" description="API name of an object (required to work in Community)."/>
+            <property name="classes" type="String" default="slds-card" label="CSS classes" description="A space-separated list of the CSS classes of the element."/>
+        </targetConfig>
+    </targetConfigs>
+    <masterLabel>Record Form</masterLabel>
+</LightningComponentBundle>
